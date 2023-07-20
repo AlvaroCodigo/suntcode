@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  suntcode-app:
+    # Nombre del servicio (puede ser diferente)
+    build:
+      # Ruta donde se encuentra el Dockerfile
+      context: .
+      # Nombre de la imagen del contenedor
+      dockerfile: Dockerfile
+    ports:
+      # Puerto en el host: Puerto en el contenedor
+      - '4200:4200'
+    # Opcionalmente, puedes definir volúmenes para persistir datos
+    volumes:
+      - ./src:/app/src
+      - ./angular.json:/app/angular.json
+      - ./package.json:/app/package.json
+      # Añade otros volúmenes necesarios para tu proyecto
+    # Opcionalmente, puedes definir variables de entorno
