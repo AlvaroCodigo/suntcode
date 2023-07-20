@@ -1,3 +1,26 @@
+# Si clonas el proyecto de github
+
+Clona el repositorio en la ubicacion que quieras con el siguiente comando
+
+```git clone https://github.com/AlvaroCodigo/suntcode.git suntcode```
+- Tener instalado docker y docker compose
+
+- Tener instalado con nvm node 14.21.3
+
+- Tener instalado con angular  14.2.12
+
+### Ejecutar
+
+```docker-compose build```
+
+```docker-compose up```
+
+
+
+--------
+
+# Crear Todo de Cero 
+
 ### Crear la estructura del proyecto y los archivos necesarios:
 
 - Utiliza el Angular para crear un nuevo proyecto de Angular. Abre una terminal y ejecuta el siguiente comando:
@@ -54,3 +77,6 @@ Esto ejecutará el contenedor basado en la imagen que construiste previamente. S
 Detener el contenedor:
 
 Para detener el contenedor, simplemente presiona **Ctrl + C** en la terminal donde se está ejecutando **docker-compose up**.
+
+
+
