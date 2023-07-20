@@ -1,27 +1,82 @@
-# SuntcodeApp
+# Si clonas el proyecto de github
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.12.
+Clona el repositorio en la ubicacion que quieras con el siguiente comando
 
-## Development server
+```git clone https://github.com/AlvaroCodigo/suntcode.git suntcode```
+- Tener instalado docker y docker compose
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Tener instalado con nvm node 14.21.3
 
-## Code scaffolding
+- Tener instalado con angular  14.2.12
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Ejecutar
 
-## Build
+```docker-compose build```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```docker-compose up```
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+--------
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Crear Todo de Cero
 
-## Further help
+### Crear la estructura del proyecto y los archivos necesarios:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Utiliza el Angular para crear un nuevo proyecto de Angular. Abre una terminal y ejecuta el siguiente comando:
+
+- Utilizar la version de node 14.21.3
+- Utilizar la version de angular 14.2.12
+
+``` ng new my-angular-app ```
+
+```yarn install```
+
+```yarn build```
+
+- Navega al directorio del proyecto recién creado:
+
+
+``` cd my-angular-app ```
+
+- Asegúrate de que tienes los archivos **Dockerfile** y **docker-compose.yml** en la raíz del proyecto, tal como se mencionó en pasos anteriores.
+
+### Construir la imagen del contenedor:
+
+- Ejecuta el siguiente comando para construir la imagen del contenedor utilizando el **Dockerfile**:
+
+<pre>
+
+contenido de Dockerfile
+
+</pre>
+
+
+```docker-compose build ```
+
+Esto generará la imagen del contenedor en tu máquina local.
+
+### Ejecutar el contenedor:
+
+- Ahora, inicia el contenedor con el siguiente comando:
+
+<pre>
+
+Contenido de docker-compose
+
+</pre>
+
+```docker-compose up```
+
+
+Esto ejecutará el contenedor basado en la imagen que construiste previamente. Si tienes mapeado el puerto 4200 en el archivo **docker-compose.yml**, podrás acceder a tu aplicación de Angular en el navegador ingresando la dirección **http://localhost:4200**.
+
+### Desarrollo en tiempo real:
+
+- Como has mapeado los volúmenes en el archivo **docker-compose.yml**, cualquier cambio que realices en el código fuente de tu proyecto Angular en el host se reflejará automáticamente dentro del contenedor sin necesidad de reconstruirlo. Esto te permite realizar desarrollos en tiempo real y ver los cambios instantáneamente en la aplicación mientras el contenedor se está ejecutando.
+  Detener el contenedor:
+
+Para detener el contenedor, simplemente presiona **Ctrl + C** en la terminal donde se está ejecutando **docker-compose up**.
+
+
+
